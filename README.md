@@ -6,7 +6,10 @@ The federal government's influence on American political campaigns and elections
 ## Abstract
 Elections and campaigns are distinct processes governed differently, with the federal government having limited control over political campaigns, except for campaign funding. The main objectives of current election campaigns and policies are voter turnout and electioneering, regulated by federal laws defining permissible and prohibited sources of contributions and expenditures, contribution limits, fundraising prohibitions, permissible uses of campaign funds, and public disclosure of contributions and expenditures.
 
-# Data Source and Methodology
+# Project Goal
+
+The project aims to increase transparency and accountability in the political system by providing insights into campaign finance. It seeks to empower stakeholders with accurate data, analysis, and reporting to make informed decisions and strengthen the democratic process.
+
 
 ## Data Source
 The US Campaign Finance Data provided by the Federal Election Commission (FEC) serves as the primary data source for this project. This dataset encompasses information on candidates, committees, political action committees (PACs), campaigns, transactions, contributions, and expenditures related to US elections.
@@ -14,30 +17,36 @@ The US Campaign Finance Data provided by the Federal Election Commission (FEC) s
 ## Data Source - Files Used
 - [Data Source - FEC Data Column Names and Abbreviations](https://www.fec.gov/campaign-finance-data/committee-summary-file-description/)
 
-# Software Tools and Technologies
+## Data Handling in Financial Analysis
+Handling financial data for analysis involves several key steps to ensure accuracy, reliability, and meaningful insights. Here's a breakdown of how financial data is managed in this project:
 
-## Software Tools and Technologies
-1. DataBricks
-2. Spark
-3. Tableau
+## Data Import and Cleaning
+Importing Data: Financial data files (e.g., .txt and .csv) are imported into a data processing environment like Databricks.
+Schema Creation: Custom schemas are created for files without headers to ensure correct data types and formats.
+Reading Files: Data files are read using appropriate functions, ensuring all necessary information is loaded correctly.
+Data Cleaning: Cleaning processes include handling missing values, removing duplicates, and correcting data types to maintain data integrity.
+Data Transformation
+Conversion: Data files are converted into more efficient formats (e.g., Parquet) to optimize storage and processing.
+Normalization: Data normalization involves restructuring data into a standard format, making it easier to join and analyze across different datasets.
+Aggregation: Aggregating data at various levels (e.g., by candidate, state, or transaction type) helps in summarizing large datasets for better insights.
 
-## DataBricks
-DataBricks, supported by AWS, Azure, and Google clouds, is utilized to handle large volumes of raw data. It facilitates data engineering, data science, and data analytics tasks, including production ETL pipelines, streaming analytics, ad-hoc analytics, and machine learning.
+## Data Integration
+Merging Dataframes: Relevant dataframes are merged to create comprehensive tables that contain all necessary information for analysis.
+Creating Relationships: Establishing relationships between different data tables (e.g., transactions and candidates) allows for more complex queries and deeper analysis.
 
-## Parquet
-Apache Parquet, with advanced encoding and compression techniques, is employed to reduce data storage costs and improve data query efficiency, especially when used with modern cloud technologies like Amazon Athena, Redshift Spectrum, BigQuery, and Azure Data Lakes.
+## Data Validation
+Accuracy Checks: Regular checks are performed to ensure data accuracy, such as verifying totals and cross-referencing with original sources.
+Consistency Verification: Ensuring that the data remains consistent throughout the analysis process by performing sanity checks and data profiling.
 
-## List Of Files After Loading
-After loading the data, a comprehensive list of files available for analysis is provided.
+## Data Analysis and Visualization
+SQL Queries: SQL is used for querying data to extract specific insights and generate summary tables.
+Power Query: Power Query is utilized for data transformation and loading into Excel, enabling seamless integration with other tools.
+Tableau Dashboards: Data visualizations are created in Tableau to represent key insights and trends, such as transaction amounts, disbursements, and contributions.
 
-# Tableau Dashboards
-
-- Tableau dashboards are used to visualize campaign finance data, including individual contributions, candidate distribution by state, and expenditure analysis.
-- Dashboards provide interactive visualizations, facilitating data exploration and analysis.
-
-# Project Goal
-
-The project aims to increase transparency and accountability in the political system by providing insights into campaign finance. It seeks to empower stakeholders with accurate data, analysis, and reporting to make informed decisions and strengthen the democratic process.
+## Statistical and Mathematical Analysis
+Essential Statistics: Applying basic statistical measures (mean, median, mode) to understand the distribution of financial data.
+Advanced Analytics: Implementing advanced statistical models and machine learning algorithms to predict outcomes and identify patterns in campaign finance.
+By systematically handling financial data through these steps, we ensure that the analysis is accurate, reliable, and provides meaningful insights into US campaign finance. This rigorous approach allows financial analysts to make informed decisions and develop strategies based on comprehensive and well-validated data.
 
 # Conclusion
 
